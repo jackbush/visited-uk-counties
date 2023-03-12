@@ -1,6 +1,7 @@
 :root {
   --color-background: #fafafa;
   --color-message: #171717;
+  --color-message-link: hotpink;
   --color-map-stroke: #444444;
   --color-map-visited: green;
   --color-map-unvisited: red;
@@ -25,7 +26,11 @@ body {
 
 .header__explainer {
 	margin: 0;
-	margin-top: 4px;
+	margin-top: 8px;
+}
+
+.header__explainer a {
+	color: var(--color-message-link);
 }
 
 .map-container {
@@ -35,6 +40,7 @@ body {
 	width: 98vw;
 	height: 98vh;
 	text-align: center;
+	z-index: -1;
 }
 
 .map-container svg {
@@ -42,5 +48,5 @@ body {
 	max-height: 100%;
 	display: inline-block;
 	/*	SHONK: easier than correcting the svg viewbox */
-	margin-left: -12.5%;
+	/*	margin-left: -12.5%;*/
 }
