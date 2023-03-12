@@ -1,3 +1,4 @@
+/*VARIABLES*/
 :root {
   --color-background: #fafafa;
   --color-message: #171717;
@@ -7,13 +8,15 @@
   --color-map-unvisited: red;
 }
 
+/*PAGE*/
 body {
 	background-color: var(--color-background);
-	font-family: sans-serif;
+	font-family: "Inter", sans-serif;
 	padding: 0;
 	margin: 0;
 }
 
+/*HEADER*/
 .header {
 	color: var(--color-message);
 	display: inline-block;
@@ -22,6 +25,7 @@ body {
 
 .header__title {
 	margin: 0;
+	font-weight: 700;
 }
 
 .header__explainer {
@@ -33,6 +37,7 @@ body {
 	color: var(--color-message-link);
 }
 
+/*MAP*/
 .map-container {
 	position: fixed;
 	top: 1vh;
@@ -51,11 +56,10 @@ body {
 
 .county {
 	fill: var(--color-map-unvisited);
-	fill: var(--color-map-background);
-	fill-opacity: 1;
-	fill-rule: evenodd;
 	stroke: var(--color-map-stroke);
 	stroke-width: 0.75;
+	fill-opacity: 1;
+	fill-rule: evenodd;
 	stroke-linejoin: round;
 	stroke-miterlimit: 4;
 	stroke-dasharray: none
