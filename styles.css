@@ -1,11 +1,13 @@
 /*VARIABLES*/
 :root {
-  --color-background: #fafafa;
-  --color-message: #171717;
-  --color-message-link: hotpink;
-  --color-map-stroke: #444444;
-  --color-map-visited: green;
-  --color-map-unvisited: red;
+  --color-background: #D9E1FF;
+  --color-message: #020325;
+  --color-message-alt: #4B4C6C;
+  --color-message-link: #FF419C;
+  --color-map-unvisited-fill: #F46060;
+  --color-map-unvisited-stroke: #9D3131;
+  --color-map-visited-fill: #179F66;
+  --color-map-visited-stroke: #006A3E;
 }
 
 /*PAGE*/
@@ -31,6 +33,7 @@ body {
 .header__explainer {
 	margin: 0;
 	margin-top: 8px;
+	color: var(--color-message-alt);
 }
 
 .header__explainer a {
@@ -55,8 +58,8 @@ body {
 }
 
 .county {
-	fill: var(--color-map-unvisited);
-	stroke: var(--color-map-stroke);
+	fill: var(--color-map-unvisited-fill);
+	stroke: var(--color-map-unvisited-stroke);
 	stroke-width: 0.75;
 	fill-opacity: 1;
 	fill-rule: evenodd;
@@ -66,5 +69,6 @@ body {
 }
 
 .county--visited {
-	fill: var(--color-map-visited);
+	fill: var(--color-map-visited-fill);
+	stroke: var(--color-map-visited-stroke);
 }
