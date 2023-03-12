@@ -50,3 +50,19 @@ body {
 	/*	SHONK: easier than correcting the svg viewbox */
 	/*	margin-left: -12.5%;*/
 }
+
+.county {
+	fill: var(--color-map-unvisited);
+	fill: var(--color-map-background);
+	fill-opacity: 1;
+	fill-rule: evenodd;
+	stroke: var(--color-map-stroke);
+	stroke-width: 0.75;
+	stroke-linejoin: round;
+	stroke-miterlimit: 4;
+	stroke-dasharray: none
+}
+
+.county--findme {
+	fill: hotpink;
+}
