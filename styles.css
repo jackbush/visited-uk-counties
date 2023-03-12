@@ -63,6 +63,6 @@ body {
 	stroke-dasharray: none
 }
 
-.county--findme {
-	fill: hotpink;
+.county--visited {
+	fill: var(--color-map-visited);
 }
