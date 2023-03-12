@@ -12,7 +12,7 @@
         --color-message-alt: #d5daed;
         --color-message-link: #d5daed;
         --color-map-unvisited-fill: #fe5151;
-        --color-map-unvisited-stroke: #e30909;
+        --color-map-unvisited-stroke: #D90808;
         --color-map-visited-fill: #00ae5a;
         --color-map-visited-stroke: #007720;
       }
@@ -102,6 +102,7 @@
         border-radius: 4px;
         background: black;
         opacity: 0;
+        transition: opacity 150ms;
       }
 
       .mouse-label.shown {
@@ -610,17 +611,21 @@
         />
       </svg>
     </main>
-    <p class="mouse-label js-county-name"></p>
+    <p class="mouse-label"></p>
     <script type="text/javascript">
       function attachMouseEvents() {
-        var elTextLabel = document.querySelector(".js-county-name");
-        var counties = document.querySelectorAll(".county");
-        counties.forEach((el) => {
+        var elTextLabel = document.querySelector(".mouse-label");
+        var mapCounties = document.querySelectorAll(".county");
+
+        document.addEventListener('mousemove', (ev) => {
+            elTextLabel.style.left = ev.clientX + "px";
+            elTextLabel.style.top = ev.clientY-40 + "px";
+        })
+
+        mapCounties.forEach((el) => {
           el.addEventListener("mouseover", (ev) => {
             elTextLabel.classList.add("shown");
             elTextLabel.innerText = ev.target.dataset.name;
-            elTextLabel.style.left = ev.clientX + "px";
-            elTextLabel.style.top = ev.clientY + "px";
           });
 
           el.addEventListener("mouseleave", (ev) => {
