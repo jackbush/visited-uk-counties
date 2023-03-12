@@ -1,0 +1,27 @@
+:root {
+  --color-background: #fafafa;
+  --color-stroke: #444444;
+  --color-visited: red;
+  --color-unvisited: blue;
+}
+
+body {
+	background-color: var(--color-background);
+	padding: 0;
+	padding: 24px;
+}
+
+.map-container {
+	position: fixed;
+	top: 1vh;
+	left: 1vw;
+	width: 98vw;
+	height: 98vh;
+	text-align: center;
+}
+
+.map-container svg {
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+}
