@@ -19,8 +19,10 @@
         --color-message-alt: #d5daed;
         --color-message-link: #d5daed;
         --color-map-unvisited-fill: #fe5151;
+        --color-map-unvisited-fill-hover: #e54141;
         --color-map-unvisited-stroke: #d90808;
         --color-map-visited-fill: #00ae5a;
+        --color-map-visited-fill-hover: #009f52;
         --color-map-visited-stroke: #007720;
       }
 
@@ -110,9 +112,17 @@
         stroke-dasharray: none;
       }
 
+      .county:hover {
+        fill: var(--color-map-unvisited-fill-hover);
+      }
+
       .county--visited {
         fill: var(--color-map-visited-fill);
         stroke: var(--color-map-visited-stroke);
+      }
+
+      .county--visited:hover {
+        fill: var(--color-map-visited-fill-hover);
       }
 
       .mouse-label {
