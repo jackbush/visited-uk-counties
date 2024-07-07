@@ -677,6 +677,10 @@
           el.addEventListener("mouseleave", (ev) => {
             elTextLabel.classList.remove("shown");
           });
+
+          el.addEventListener('click', function(ev) {
+            navigator.clipboard.writeText(ev.target.dataset.name);
+          });
         });
       }
 
