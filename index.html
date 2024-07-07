@@ -4,7 +4,7 @@
     <title>Visited UK Counties</title>
     <meta
       name="description"
-      content="A rainy afternoon project to document the fun but extremely rainy project of discovering my adoptive home."
+      content="Discovering my adoptive home."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
@@ -43,6 +43,12 @@
         background-color: var(--color-background);
         padding: 0;
         margin: 0;
+      }
+
+      .mobile-hidden {
+        @media(max-width: 480px) {
+          display: none;
+        }
       }
 
       /*HEADER*/
@@ -90,10 +96,10 @@
       /*MAP*/
       .map-container {
         position: fixed;
-        top: 1vh;
-        left: 1vw;
-        width: 98vw;
-        height: 98vh;
+        top: 5vh;
+        left: 5vw;
+        width: 90vw;
+        height: 90vh;
         text-align: center;
       }
 
@@ -149,10 +155,6 @@
     <header class="header">
       <h1 class="header__title">Visited UK Counties</h1>
       <div class="header__explainer">
-        <p>
-          A rainy afternoon project to document the fun but
-          <i>extremely rainy</i> project of discovering my adoptive home
-        </p>
         <p>
           <strong>
             <span class="js-percent-complete">0</span>% complete
