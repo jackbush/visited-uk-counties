@@ -1,5 +1,5 @@
 # Visited UK Counties
-A fun rainy afternoon project to document the fun but _extremely rainy_ project of discovering my adoptive home.
+A rainy afternoon project to document the fun but _extremely rainy_ project of discovering my adoptive home.
 
 ## Open Source Resources
 - Font is Inter [(source)](https://rsms.me/inter/)
