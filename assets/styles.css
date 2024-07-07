@@ -11,7 +11,8 @@
   --color-map-visited-fill-hover: #009f52;
   --color-map-visited-stroke: #007720;
 
-  --transition-default: 400ms ease-in-out;
+  --transition-hover: 50ms;
+  --transition-load: 700ms ease-in-out;
 }
 
 /*FONT*/
@@ -99,20 +100,22 @@ p a {
   stroke-linejoin: round;
   stroke-miterlimit: 4;
   stroke-dasharray: none;
-}
-
-.county:hover {
-  fill: var(--color-map-unvisited-fill-hover);
+  transition: var(--transition-load);
 }
 
 .county--visited {
   fill: var(--color-map-visited-fill);
   stroke: var(--color-map-visited-stroke);
-  transition: var(--transition-default);
+}
+
+.county:hover {
+  fill: var(--color-map-unvisited-fill-hover);
+  transition: var(--transition-hover) !important;
 }
 
 .county--visited:hover {
   fill: var(--color-map-visited-fill-hover);
+  transition: var(--transition-hover) !important;
 }
 
 .mouse-label {

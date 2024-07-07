@@ -1,7 +1,7 @@
 var visitedCounties = ["Devon", "Somerset", "Surrey", "Middlesex", "Hampshire", "Shropshire", "Midlothian", "East Lothian", "Morayshire", "Inverness-shire", "Aberdeenshire", "Angus", "Lancashire", "Down", "Dorset", "Bedfordshire", "Berkshire", "Essex", "Kent", "Cambridgeshire", "Sussex", "West Lothian", "Perthshire", "Durham", "Suffolk", "Fife", "Yorkshire", "Derbyshire", "Oxfordshire", "Northumberland", "Lincolnshire", "Wiltshire", "Argyllshire", "Lanarkshire", "Ayrshire", "Dumfriesshire", "Westmorland", "Sutherland", "Cromartyshire", "Ross-shire", "Peeblesshire", "Banffshire", "Buteshire", "Peterborough", "Buckinghamshire", "Northamptonshire", "Cumberland", "Leicestershire", "Renfrewshire", "Herefordshire", "Gloucestershire", "Roxburghshire", "Brecknockshire", "Hertfordshire", "Glamorgan", "Monmouthshire", "Nairnshire", "Berwickshire", "Selkirkshire", "Cornwall", "Rutland"];
-var totalCounties = 92;
-var percentComplete = 0;
-var interval = 80;
+var totalCounties = document.querySelectorAll('.county').length;
+var percentComplete = 0; // gets iterated by animateLoad()
+var animationInterval = 50; // used by animateLoad()
 
 function attachMouseEvents() {
 var elTextLabel = document.querySelector(".mouse-label");
@@ -40,14 +40,14 @@ visitedCounties.forEach((county, idx) => {
       .querySelector("[data-name='" + county + "']")
       .classList
       .add('county--visited');
-    percentComplete = Math.floor(100*(idx+1)/totalCounties);
+    percentComplete = Math.floor(100*(idx)/totalCounties);
     updateCompletion(percentComplete);
-  }, idx * interval);
+  }, idx * animationInterval);
 })
 
 setTimeout(() => {
   attachMouseEvents()
-}, visitedCounties.length * interval)
+}, visitedCounties.length * animationInterval)
 }
 
 document.addEventListener("ready", animateLoad());
