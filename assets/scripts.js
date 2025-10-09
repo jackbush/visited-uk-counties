@@ -1,4 +1,4 @@
-var visitedCounties = ["Devon", "Somerset", "Surrey", "Middlesex", "Hampshire", "Shropshire", "Midlothian", "East Lothian", "Morayshire", "Inverness-shire", "Aberdeenshire", "Angus", "Lancashire", "Down", "Dorset", "Bedfordshire", "Berkshire", "Essex", "Kent", "Cambridgeshire", "Sussex", "West Lothian", "Perthshire", "Durham", "Suffolk", "Fife", "Yorkshire", "Derbyshire", "Oxfordshire", "Northumberland", "Lincolnshire", "Wiltshire", "Argyllshire", "Lanarkshire", "Ayrshire", "Dumfriesshire", "Westmorland", "Sutherland", "Cromartyshire", "Ross-shire", "Peeblesshire", "Banffshire", "Buteshire", "Peterborough", "Buckinghamshire", "Northamptonshire", "Cumberland", "Leicestershire", "Renfrewshire", "Herefordshire", "Gloucestershire", "Roxburghshire", "Brecknockshire", "Hertfordshire", "Glamorgan", "Monmouthshire", "Nairnshire", "Berwickshire", "Selkirkshire", "Cornwall", "Rutland"];
+var visitedCounties = document.querySelectorAll('.county--visited').length;
 var totalCounties = document.querySelectorAll('.county').length;
 var percentComplete = 0; // gets iterated by animateLoad()
 var animationInterval = 50; // used by animateLoad()
